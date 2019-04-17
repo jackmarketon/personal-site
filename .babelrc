@@ -1,0 +1,29 @@
+{
+  "presets": [
+    ["next/babel", {
+      "preset-env": {
+        "targets": { "node": "current" },
+        "modules": "commonjs"
+      }
+    }]
+  ],
+  "plugins": [
+    ["inline-react-svg"]
+  ],
+  "env": {
+    "client": {
+      "presets": ["next/babel", {
+        "preset-env": {
+          "targets": { "chrome": 58, "ie": 11 },
+          "modules": "commonjs"
+        }
+      }]
+    },
+    "test": {
+      "presets": [
+        ["next/babel", { "preset-env": { "modules": "commonjs" } }]
+      ]
+    }
+  }
+}
+

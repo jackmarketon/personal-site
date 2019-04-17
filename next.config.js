@@ -1,0 +1,17 @@
+module.exports = {
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.md$/,
+      use: 'raw-loader',
+    });
+
+    config.module.rules.push({
+      test: /\.jsx?$/,
+      enforce: 'pre',
+      exclude: /node_modules/,
+      use: [{ loader: 'eslint-loader', options: { emitWarning: dev } }]
+    });
+
+    return config;
+  }
+};
