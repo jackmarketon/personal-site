@@ -1,5 +1,5 @@
 module.exports = {
-  webpack: (config) => {
+  webpack: config => {
     config.module.rules.push({
       test: /\.md$/,
       use: 'raw-loader',
@@ -9,9 +9,9 @@ module.exports = {
       test: /\.jsx?$/,
       enforce: 'pre',
       exclude: /node_modules/,
-      use: [{ loader: 'eslint-loader', options: { emitWarning: dev } }]
+      use: [{ loader: 'eslint-loader', options: { emitWarning: true } }],
     });
 
     return config;
-  }
+  },
 };
