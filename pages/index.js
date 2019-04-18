@@ -1,7 +1,12 @@
 import React from 'react';
+import styled from 'styled-components';
+import Hero from '../components/hero';
+
+const Title = styled.h1``;
 
 export default () => (
   <>
-    <h1>Hello World</h1>
+    <Hero />
+    <Title>Hello World</Title>
   </>
 );

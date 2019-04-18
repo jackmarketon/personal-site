@@ -20,12 +20,15 @@
   },
   "homepage": "https://github.com/jackmarketon/personal-site#readme",
   "dependencies": {
+    "babel-plugin-styled-components": "^1.10.0",
     "eslint-config-prettier": "^4.1.0",
     "gray-matter": "^4.0.2",
     "next": "^8.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-markdown": "^4.0.8",
+    "styled-components": "^4.2.0",
+    "styled-theming": "^2.2.0",
     "typeface-anton": "0.0.72",
     "typeface-roboto": "0.0.54"
   },

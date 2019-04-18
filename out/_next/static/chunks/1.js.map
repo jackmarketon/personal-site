@@ -1,0 +1,1 @@
+{"version":3,"file":"static/chunks/1.js","sources":["webpack:///./posts/example-post.md"],"sourcesContent":["export default \"---\\ntitle: Example post\\ndate: 05-16-2019\\nwrittenBy: Jackson Marketon\\n---\\n\\n**Example** post _please_ ignore\\n\""],"mappings":";;;;;;;;;;AAAA;AAAA;;;;A","sourceRoot":""}
