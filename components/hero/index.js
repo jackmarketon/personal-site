@@ -2,8 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { transparentize } from 'polished';
 
+import Body from '../body';
+import Menu from '../menu';
+
 const HeroWrapper = styled.div`
-  align-items: center;
   background: linear-gradient(
       45deg,
       ${({ theme }) => transparentize(0.2, theme.color.secondary)},
@@ -14,10 +16,19 @@ const HeroWrapper = styled.div`
   background-position: center, top;
   background-repeat: no-repeat, no-repeat;
   background-size: auto 100%;
-  display: flex;
   height: 400px;
+  position: relative;
+  width: 100%;
+  z-index: 0;
+`;
+
+const TitleWrapper = styled.div`
+  align-items: center;
+  display: flex;
+  height: 100%;
   flex-direction: column;
   justify-content: center;
+  min-height: 100%;
   position: relative;
   width: 100%;
   z-index: 0;
@@ -34,15 +45,18 @@ const Hero = styled.div`
 
 const First = styled.span`
   color: ${({ theme }) => theme.color.primary};
-  letter-spacing: 0px;
+  display: block;
+  font-size: 5.026rem;
+  letter-spacing: 4px;
   position: relative;
   z-index: 2;
 `;
 
 const Last = styled.span`
   color: ${({ theme }) => theme.color.ternary};
-  letter-spacing: -10px;
-  margin-left: -5px;
+  display: block;
+  letter-spacing: -6px;
+  margin-left: -3px;
   position: relative;
   z-index: 1;
 `;
@@ -60,10 +74,15 @@ export default ({
   tagline = 'Software & Product Engineer',
 }) => (
   <HeroWrapper image={image}>
-    <Hero>
-      <First>Jackson</First>
-      <Last>Marketon</Last>
-    </Hero>
-    <Tagline>{tagline}</Tagline>
+    <Body>
+      <Menu />
+      <TitleWrapper>
+        <Hero>
+          <First>Jackson</First>
+          <Last>Marketon</Last>
+        </Hero>
+        <Tagline>{tagline}</Tagline>
+      </TitleWrapper>
+    </Body>
   </HeroWrapper>
 );

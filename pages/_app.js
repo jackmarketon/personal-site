@@ -3,7 +3,6 @@ import NextApp, { Container } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 
 import GlobalStyle from '../components/globalStyle';
-import Menu from '../components/menu';
 import theme from '../config/theme';
 
 export default class App extends NextApp {
@@ -24,7 +23,6 @@ export default class App extends NextApp {
       <ThemeProvider theme={{ ...theme }}>
         <Container>
           <GlobalStyle />
-          <Menu />
           <Component {...pageProps} />
         </Container>
       </ThemeProvider>

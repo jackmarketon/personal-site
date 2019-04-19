@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Link from 'next/link';
 
 import Hero from '../components/hero';
+import Body from '../components/body';
 import loadedPosts from '../src/posts';
 
 export default class extends Component {
@@ -16,17 +17,19 @@ export default class extends Component {
     return (
       <>
         <Hero image="blog" tagline="Reveries and Ruminations" />
-        <h1>Posts</h1>
-        {Object.keys(posts).map(slug => (
-          <Link
-            href={{ pathname: '/post', query: { id: slug } }}
-            as={`/post/${slug}`}
-            key={slug}
-          >
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a>{posts[slug].title}</a>
-          </Link>
-        ))}
+        <Body>
+          <h1>Posts</h1>
+          {Object.keys(posts).map(slug => (
+            <Link
+              href={{ pathname: '/post', query: { id: slug } }}
+              as={`/post/${slug}`}
+              key={slug}
+            >
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+              <a>{posts[slug].title}</a>
+            </Link>
+          ))}
+        </Body>
       </>
     );
   }
