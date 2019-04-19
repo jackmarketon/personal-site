@@ -1,15 +1,27 @@
 import React from 'react';
-import styled from 'styled-components';
 import Hero from '../components/hero';
 import Body from '../components/body';
-
-const Title = styled.h1``;
+import RoleList from '../components/roleList';
+import List from '../components/list';
+import resume from '../config/resume';
 
 export default () => (
   <>
     <Hero image="street" tagline="Currently Working for OpenTable" />
     <Body>
-      <Title>Resume</Title>
+      <List
+        title="Proficiencies"
+        listItems={resume.proficiencies}
+        listDict={{
+          expert: 'Expert',
+          advanced: 'Advanced',
+          experienced: 'Experienced',
+          interest: 'Interested In',
+          former: 'Past Experience',
+        }}
+      />
+      <RoleList title="Experience" roles={resume.experiences} />
+      <RoleList title="Education" roles={resume.education} />
     </Body>
   </>
 );
