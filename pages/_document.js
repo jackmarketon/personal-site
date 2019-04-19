@@ -19,7 +19,13 @@ export default class Document extends NextDocument {
     const { styleTags } = this.props;
     return (
       <html lang="en-US">
-        <Head>{styleTags}</Head>
+        <Head>
+          <link
+            href="https://fonts.googleapis.com/css?family=Bilbo+Swash+Caps|Roboto:400,700|Source+Code+Pro"
+            rel="stylesheet"
+          />
+          {styleTags}
+        </Head>
         <body>
           <Main />
           <NextScript />

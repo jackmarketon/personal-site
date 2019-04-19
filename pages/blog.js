@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
 
+import Hero from '../components/hero';
 import loadedPosts from '../src/posts';
 
 export default class extends Component {
@@ -14,6 +15,7 @@ export default class extends Component {
 
     return (
       <>
+        <Hero image="blog" tagline="Reveries and Ruminations" />
         <h1>Posts</h1>
         {Object.keys(posts).map(slug => (
           <Link

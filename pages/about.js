@@ -1,3 +1,12 @@
 import React from 'react';
+import styled from 'styled-components';
+import Hero from '../components/hero';
 
-export default () => <h1>About Me</h1>;
+const Title = styled.h1``;
+
+export default () => (
+  <>
+    <Hero image="sd" tagline="Minnesota Born, South Dakota Raised" />
+    <Title>About Me</Title>
+  </>
+);

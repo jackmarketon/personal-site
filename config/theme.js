@@ -1,32 +1,27 @@
 export default {
+  heroImage: {
+    default: '/static/banner_image.jpg',
+    recipe: '/static/banner_image_recipe.jpg',
+    street: '/static/banner_image_street.jpg',
+    blog: '/static/banner_image_blog.jpg',
+    sd: '/static/banner_image_sd.jpg',
+  },
   font: {
     fontSize: {
       root: '14px',
     },
     fontFamily: {
       sansSerif: '"Roboto", "Helvetica Neue", Helvertica, Arial, sans-serif',
-      serif: '"Anton", Georgia, Times, "Times New Roman", serif',
-      monoSpaced: 'Consolas, monaco, monospace',
+      serif: '"Bilbo Swash Caps", Times, "Times New Roman", serif',
+      monoSpaced: '"Source Code Pro", Consolas, monaco, monospace',
     },
   },
   color: {
-    grey: {
-      light: '#F4F4F4',
-      normal: '#C5C5C5',
-      dark: '#01161E',
-    },
-    white: '#E8E8E4',
-    black: '#010406',
-    red: {
-      dark: '#912F56',
-      light: '#D33F49',
-    },
-    background: '#465359',
-    foreground: '#4C5B61',
-    primary: {
-      dark: '#104F55',
-      light: '#517F83',
-    },
-    highlight: '#48dcf6',
+    background: '#FEFFFE',
+    white: '#C5C6C7',
+    black: '#0B0C10',
+    primary: '#66FCF1',
+    secondary: '#1F2833',
+    ternary: '#45A29E',
   },
 };
