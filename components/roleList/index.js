@@ -9,7 +9,7 @@ const List = styled.dl`
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-height: 30rem;
+  max-height: 32rem;
   margin: -1rem 0;
   width: 100%;
 `;
