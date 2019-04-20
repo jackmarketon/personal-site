@@ -4,6 +4,7 @@ import { transparentize } from 'polished';
 
 import Body from '../body';
 import Menu from '../menu';
+import SocialLinks from '../socialLinks';
 
 const HeroWrapper = styled.div`
   background: linear-gradient(
@@ -16,7 +17,8 @@ const HeroWrapper = styled.div`
   background-position: center, top;
   background-repeat: no-repeat, no-repeat;
   background-size: auto 100%;
-  height: 400px;
+  height: ${({ full = false }) => (full ? '100vh' : '400px')};
+  overflow: hidden;
   position: relative;
   width: 100%;
   z-index: 0;
@@ -70,12 +72,14 @@ const Tagline = styled.span`
 `;
 
 export default ({
+  full = false,
   image = 'default',
   tagline = 'Software & Product Engineer',
 }) => (
-  <HeroWrapper image={image}>
+  <HeroWrapper full={full} image={image}>
     <Body>
       <Menu />
+      <SocialLinks />
       <TitleWrapper>
         <Hero>
           <First>Jackson</First>

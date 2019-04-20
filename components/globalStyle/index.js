@@ -10,6 +10,10 @@ export default createGlobalStyle`
     * {
       box-sizing: border-box;
     }
+
+    .bookTitle {
+      font-style: italic;
+    }
   }
 
   head {

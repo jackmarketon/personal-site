@@ -87,11 +87,12 @@ export default {
       'TypeScript',
       'GraphQL',
       'MongoDB',
+      'jQuery',
       'Redis',
       'Jest',
     ],
     experienced: ['PostgreSQL', 'Python', 'Docker', 'D3.js', 'MySQL', 'AWS'],
     interest: ['Machine Learning', 'Clojure', 'GoLang', 'RXjs'],
-    former: ['AngularJS', 'PHP'],
+    former: ['AngularJS', 'Ember', 'Backbone', 'PHP'],
   },
 };

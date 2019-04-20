@@ -36,6 +36,7 @@ const Anchor = styled.a`
   padding: 0 0 0 1rem;
   text-align: left;
   text-decoration: none;
+  transition: border 0.5s ease-in-out, margin 0.25s ease-in-out;
   vertical-align: bottom;
   width: 100%;
 
@@ -46,6 +47,7 @@ const Anchor = styled.a`
   &:active {
     border-left: 1px solid ${({ theme }) => theme.color.primary};
     padding-left: 1rem;
+    margin-right: -1px;
   }
   &.active {
     color: ${({ theme }) => theme.color.ternary};

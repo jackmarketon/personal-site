@@ -7,7 +7,7 @@ import resume from '../config/resume';
 
 export default () => (
   <>
-    <Hero image="street" tagline="Currently Working for OpenTable" />
+    <Hero image="street" tagline="Development Culture Evangelist" />
     <Body>
       <List
         title="Proficiencies"
