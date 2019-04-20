@@ -1,6 +1,7 @@
 const fs = require('fs');
 
 module.exports = {
+  target: 'serverless',
   exportPathMap: async defaultPathMap => {
     const routes = await new Promise((resolve, reject) => {
       fs.readdir('./posts', (err, result) => {
