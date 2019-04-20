@@ -55,19 +55,21 @@ export default class extends Component {
         <Hero image="blog" tagline="Reveries and Contemplation" />
         <Body>
           <ListTitle>Blog</ListTitle>
-          {Object.keys(posts).map(slug => (
-            <LinkWrapper key={slug}>
-              <Link
-                href={{ pathname: '/post', query: { id: slug } }}
-                as={`/post/${slug}`}
-              >
-                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                <Anchor>
-                  <Post {...posts[slug]} />
-                </Anchor>
-              </Link>
-            </LinkWrapper>
-          ))}
+          {Object.keys(posts).length === 0
+            ? 'No Posts Available'
+            : Object.keys(posts).map(slug => (
+              <LinkWrapper key={slug}>
+                <Link
+                  href={{ pathname: '/post', query: { id: slug } }}
+                  as={`/post/${slug}`}
+                >
+                  {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                  <Anchor>
+                    <Post {...posts[slug]} />
+                  </Anchor>
+                </Link>
+              </LinkWrapper>
+              ))}
         </Body>
       </>
     );

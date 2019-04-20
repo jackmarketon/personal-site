@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactMarkdown from 'react-markdown';
+import Router from 'next/router';
 import styled from 'styled-components';
 
 import Hero from '../components/hero';
@@ -13,11 +14,32 @@ const Byline = styled.span`
   border-right: none;
   border-top: none;
   padding: 0 0 0 0.8rem;
+  margin: 0 0 0 3rem;
 `;
+
+const Content = styled(ReactMarkdown)`
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+  padding: 0 3rem;
+`;
+
 export default class Post extends Component {
-  static getInitialProps = async ({ query: { id } }) => ({
-    ...posts[id],
-  });
+  static getInitialProps = async ({ res, query: { id } }) => {
+    if (res && !id) {
+      res.writeHead(302, {
+        Location: '/blog',
+      });
+      res.end();
+      return {};
+    }
+    if (!res && !id) {
+      Router.push('/blog');
+      return {};
+    }
+    return {
+      ...posts[id],
+    };
+  };
 
   render() {
     const {
@@ -35,7 +57,7 @@ export default class Post extends Component {
           <Byline>
             {writtenBy} | {date}
           </Byline>
-          <ReactMarkdown source={document} />
+          <Content source={document} />
         </Body>
       </>
     );

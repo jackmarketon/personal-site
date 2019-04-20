@@ -19,12 +19,18 @@ function initPosts() {
         .split('.')
         .slice(0, -1)
         .join('.');
+
       if (slug.indexOf('example-') === 0) {
         return acc;
       }
 
       const { default: value } = values[idx];
       const { content: document, data } = matter(value);
+
+      // W/ No dates we have a post that notes live
+      if (!data.date) {
+        return acc;
+      }
 
       return { ...acc, [slug]: { ...data, document } };
     }, {});
