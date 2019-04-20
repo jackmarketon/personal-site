@@ -84,7 +84,7 @@ const MenuButton = styled.button`
 const { menuItems } = config;
 
 const Menu = ({ router }) => {
-  const [menuVisible, toggleMenu] = useState(true);
+  const [menuVisible, toggleMenu] = useState(false);
 
   return (
     <>
