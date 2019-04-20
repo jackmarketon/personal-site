@@ -71,7 +71,7 @@ const RoleListItem = ({
   location,
   description = '',
 }) => {
-  const key = `${organization}+${title}`;
+  const key = `${organization}+${title}+${startDate}`;
   const duration = endDate
     ? `${startDate} - ${endDate}`
     : `${startDate} - Present`;

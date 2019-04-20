@@ -19,6 +19,10 @@ function initPosts() {
         .split('.')
         .slice(0, -1)
         .join('.');
+      if (slug.indexOf('example-') === 0) {
+        return acc;
+      }
+
       const { default: value } = values[idx];
       const { content: document, data } = matter(value);
 
