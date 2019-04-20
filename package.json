@@ -6,7 +6,7 @@
   "scripts": {
     "start": "next",
     "build": "next build",
-    "export": "npm run build && next export",
+    "export": "npm run build && next export -o dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
