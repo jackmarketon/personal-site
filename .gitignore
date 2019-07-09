@@ -62,3 +62,6 @@ typings/
 
 # editor
 .vscode
+
+# OS
+.DS_Store
