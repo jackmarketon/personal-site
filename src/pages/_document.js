@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import NextDocument, { Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';

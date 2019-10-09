@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import Hero from '../components/hero';
 import Body from '../components/body';
 import ListTitle from '../components/listTitle';
-import posts from '../src/posts';
+import posts from '../lib/posts';
 
 const Byline = styled.span`
   border: 1px solid ${({ theme }) => theme.color.ternary};

@@ -1,10 +1,10 @@
 export default {
   heroImage: {
-    default: '/static/banner_image.jpg',
-    recipe: '/static/banner_image_recipe.jpg',
-    street: '/static/banner_image_street.jpg',
-    blog: '/static/banner_image_blog.jpg',
-    sd: '/static/banner_image_sd.jpg',
+    default: '/public/static/banner_image.jpg',
+    recipe: '/public/static/banner_image_recipe.jpg',
+    street: '/public/static/banner_image_street.jpg',
+    blog: '/public/static/banner_image_blog.jpg',
+    sd: '/public/static/banner_image_sd.jpg',
   },
   font: {
     fontSize: {

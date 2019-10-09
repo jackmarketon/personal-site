@@ -3,7 +3,7 @@ export default {
     { link: '/', title: 'Home' },
     { link: '/about', title: 'About' },
     { link: '/resume', title: 'Resume' },
-    { link: '/blog', title: 'Blog' },
-    { link: '/recipes', title: 'Recipes' },
+    { link: '/blog', title: 'Blog', hidden: true },
+    { link: '/recipes', title: 'Recipes', hidden: true },
   ],
 };

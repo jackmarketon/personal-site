@@ -92,7 +92,7 @@ const Menu = ({ router }) => {
         Menu
       </MenuButton>
       <MenuWrapper active={menuVisible}>
-        {menuItems.map(({ link: href, title }) => (
+        {menuItems.map(({ link: href, title, hidden }) => !hidden && (
           <MenuItem key={title}>
             <Link href={{ pathname: href }} key={title}>
               {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}

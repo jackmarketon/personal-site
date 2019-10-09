@@ -1,4 +1,5 @@
-import NextApp, { Container } from 'next/app';
+/* eslint-disable react/jsx-props-no-spreading */
+import NextApp from 'next/app';
 import NProgress from 'nprogress';
 import Router from 'next/router';
 import React from 'react';
@@ -27,10 +28,8 @@ export default class App extends NextApp {
 
     return (
       <ThemeProvider theme={{ ...theme }}>
-        <Container>
-          <GlobalStyle />
-          <Component {...pageProps} />
-        </Container>
+        <GlobalStyle />
+        <Component {...pageProps} />
       </ThemeProvider>
     );
   }
