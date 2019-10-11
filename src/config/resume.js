@@ -9,6 +9,8 @@ export default {
     },
     {
       organization: 'Freelance',
+      title: 'P&G Contractor',
+      team: 'on: Gillette Microsite',
       startDate: 'Dec 2018',
       endDate: 'Feb 2019',
     },
