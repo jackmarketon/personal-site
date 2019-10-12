@@ -24,6 +24,7 @@
     "date-fns": "^2.4.1",
     "eslint-config-prettier": "^6.4.0",
     "gray-matter": "^4.0.2",
+    "jest": "^24.9.0",
     "next": "^9.1.1",
     "nprogress": "^0.2.0",
     "polished": "^3.4.1",
