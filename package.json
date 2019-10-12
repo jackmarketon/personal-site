@@ -7,7 +7,8 @@
     "start": "next",
     "build": "next build",
     "export": "echo \"Don't using export\" && exit 1 && npm run build && next export",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:watch": "jest -w"
   },
   "repository": {
     "type": "git",
