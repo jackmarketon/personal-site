@@ -1,6 +1,7 @@
 import React, { useReducer } from 'react';
 import Header from '../../../components/projectHeader';
 import Body from '../../../components/body';
+import TextInput from '../../../components/textInput';
 import amoritize from '../../../lib/amoritizeLoan';
 
 const initialState = {
@@ -31,34 +32,51 @@ export default () => {
     <>
       <Header pageTitle="Renting Vs Buying" />
       <Body>
-        <input
+        <TextInput
           type="text"
+          id="loanAmount"
+          label="Loan Amount"
           value={state.loanAmount}
           onChange={({ target: { value } }) => dispatch({ type: 'loanAmount', payload: value })}
         />
-        <input
+        <TextInput
           type="text"
+          id="monthlyPayment"
+          label="Monthly Payment"
           value={state.monthlyPayment}
-          onChange={({  target: { value }  }) => dispatch({ type: 'pamonthlyPaymentyment', payload: value })}
+          onChange={({ target: { value } }) => dispatch({ type: 'monthlyPayment', payload: value })}
         />
-        <input
+        <TextInput
           type="text"
+          id="interestRate"
+          label="APR"
           value={state.interestRate}
-          onChange={({  target: { value }  }) => dispatch({ type: 'interestRate', payload: value })}
+          onChange={({ target: { value } }) => dispatch({ type: 'monthinterestRatelyPayment', payload: value })}
         />
         <button type="button" onClick={() => dispatch({ type: 'submit' })}>Submit</button>
         {state.schedule && (
-          <ul>
-            {state.schedule.map(
-              ({ principalPayment, interestPayment, principal }) => (
-                <li key={principal}>
-                  {principalPayment},
-                  {interestPayment},
-                  {principal}
-                </li>
-              )
-            )}
-          </ul>
+          <table>
+            <thead>
+              <tr>
+                <td>Month</td>
+                <td>Principal Payment</td>
+                <td>Interest Payment</td>
+                <td>Principal</td>
+              </tr>
+            </thead>
+            <tbody>
+              {state.schedule.map(
+                ({ principalPayment, interestPayment, principal }, idx) => (
+                  <tr key={principal}>
+                    <td>{idx + 1}</td>
+                    <td>{principalPayment}</td>
+                    <td>{interestPayment}</td>
+                    <td>{principal}</td>
+                  </tr>
+                )
+              )}
+            </tbody>
+          </table>
         )}
       </Body>
     </>
