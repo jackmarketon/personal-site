@@ -1,19 +1,27 @@
 export default {
   experiences: [
     {
+      organization: 'Pinterest',
+      title: 'Software Engineer (L5)',
+      team: 'Business Access - Ad Interfaces & Growth',
+      location: 'San Francisco, CA',
+      startDate: 'May 2020',
+    },
+    {
       organization: 'OpenTable',
       title: 'Senior Software Engineer',
       startDate: 'Feb 2019',
+      endDate: 'May 2020',
       team: 'Consumer Web - Booking Team',
       location: 'San Francisco, CA',
     },
-    {
-      organization: 'Freelance',
-      title: 'Contractor for P&G',
-      team: 'Gillette Microsite',
-      startDate: 'Dec 2018',
-      endDate: 'Feb 2019',
-    },
+    // {
+    //   organization: 'Freelance',
+    //   title: 'Contractor for P&G',
+    //   team: 'Gillette Microsite',
+    //   startDate: 'Dec 2018',
+    //   endDate: 'Feb 2019',
+    // },
     {
       organization: 'Field Nation',
       title: 'Senior Software Engineer',

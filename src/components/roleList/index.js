@@ -6,7 +6,7 @@ import ListTitle from '../listTitle';
 const List = styled.dl`
   align-content: flex-start;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   max-height: 32rem;
