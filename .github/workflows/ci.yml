@@ -1,5 +1,5 @@
 name: CI
-on: [push, pull_request]
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
   automerge:
@@ -8,7 +8,7 @@ jobs:
       - name: Dependabot auto merge
         uses: fastify/github-action-merge-dependabot@v2.2.0
         if: ${{ github.actor == 'dependabot[bot]' && github.event_name == 'pull_request' }}
-          with:
-            github-token: ${{ secrets.GITHUB_TOKEN }}
-            merge-method: squash
-            merge-comment: "Auto-merge dependabot..."
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          merge-method: squash
+          merge-comment: 'Auto-merge dependabot...'
