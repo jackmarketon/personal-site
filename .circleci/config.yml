@@ -24,4 +24,4 @@ jobs:
           command: npm run eslint
       - run:
           name: Run Jest
-          command: npm run jest
+          command: npm run test
