@@ -10,8 +10,7 @@
     "test": "jest",
     "test:watch": "jest -w",
     "eslint": "eslint src/",
-    "textlint": "textlint -c .textlintrc src/",
-    "lint": "npm run eslint"
+    "textlint": "textlint -c .textlintrc src/"
   },
   "repository": {
     "type": "git",
