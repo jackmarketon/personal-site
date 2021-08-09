@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Github, Twitter, Linkedin } from 'styled-icons/fa-brands';
+import { Github, Linkedin } from 'styled-icons/fa-brands';
 
 const Wrapper = styled.div`
   display: flex;
@@ -51,7 +51,6 @@ export default () => (
       rel="noopener noreferrer"
     >
       <Linkedin />
-      master & slave hard dirve
     </Link>
   </Wrapper>
 );
