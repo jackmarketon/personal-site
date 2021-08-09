@@ -52,12 +52,5 @@ export default () => (
     >
       <Linkedin />
     </Link>
-    <Link
-      href="https://twitter.com/jackmarketon"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Twitter />
-    </Link>
   </Wrapper>
 );
