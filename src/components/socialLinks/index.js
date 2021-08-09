@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Github, Twitter, Linkedin } from 'styled-icons/fa-brands';
+import { Github, Linkedin } from 'styled-icons/fa-brands';
 
 const Wrapper = styled.div`
   display: flex;
@@ -51,13 +51,6 @@ export default () => (
       rel="noopener noreferrer"
     >
       <Linkedin />
-    </Link>
-    <Link
-      href="https://twitter.com/jackmarketon"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Twitter />
     </Link>
   </Wrapper>
 );
