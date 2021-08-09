@@ -3,6 +3,7 @@ on: [push]
 
 jobs:
   copy:
+    runs-on: ubuntu-latest
     name: Copy checks (via Alex)
     steps:
       - uses: theashraf/alex-action@master
