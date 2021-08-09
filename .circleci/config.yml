@@ -1,7 +1,6 @@
 version: 2
 jobs: 
   build: 
-    working_directory: src/
     docker:
       - image: circleci/node:12.13.0
     steps:
