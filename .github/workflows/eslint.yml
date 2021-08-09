@@ -1,5 +1,5 @@
 name: Eslint
-on: [push]
+on: pull_request
 
 jobs:
   eslint:
