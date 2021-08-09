@@ -6,7 +6,7 @@ on:
 jobs:
   lighthouse:
     runs-on: ubuntu-latest
-    if: ${{ github.actor == 'vercel[bot]' }}
+    if: ${{ github.actor == 'vercel' }}
     steps:
       - name: Get Vercel URL
         uses: aaimio/vercel-preview-url-action@master
