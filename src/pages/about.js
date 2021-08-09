@@ -35,7 +35,7 @@ export default () => {
       <Body>
         <Title>Hello and Welcome!</Title>
         <P>
-          First, of course a little about me. You can call me Jack, Jackson, or
+          First, a little about me. You can call me Jack, Jackson, or
           even Wedge. I&apos;m a product engineer living in San Francisco,
           California with Kyrie, my wife, and Mandy, our basset hound. While we
           are located in San Francisco, my wife is from the cold white north (
