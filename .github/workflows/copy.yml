@@ -1,5 +1,5 @@
 name: Copy
-on: [push, pull_request]
+on: [push]
 
 jobs:
   language-lint:

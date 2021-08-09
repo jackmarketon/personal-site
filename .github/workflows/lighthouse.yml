@@ -5,13 +5,18 @@ jobs:
   lighthouse:
     runs-on: ubuntu-latest
     steps:
+      - name: Get Vercel URL
+        uses: aaimio/vercel-preview-url-action@master
+        id: vercel_preview_url
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: mkdir /tmp/artifacts
       - name: Run Lighthouse
         uses: foo-software/lighthouse-check-action@master
         with:
           accessToken: ${{ secrets.GITHUB_TOKEN }}
           outputDirectory: /tmp/artifacts
-          urls: '${{ github.event.deployment_status.target_url }}'
+          urls: ${{ steps.vercel_preview_url.outputs.vercel_preview_url }}
       - name: Upload artifacts
         uses: actions/upload-artifact@master
         with:
