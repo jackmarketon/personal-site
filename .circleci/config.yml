@@ -21,7 +21,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
       - run:    
           name: Run eslint
-          command: npm eslint
+          command: npm run eslint
       - run:
           name: Run textlint
-          command: npm textlint
+          command: npm run textlint
