@@ -11,5 +11,3 @@ jobs:
         with:
           reporter: github-pr-check
           eslint_flags: '-c .eslintrc src/'
-          fail_on_error: true
-          level: error
