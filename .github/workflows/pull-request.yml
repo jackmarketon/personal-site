@@ -1,5 +1,5 @@
-name: Push Checking
-on: push
+name: Pull Request Checking
+on: pull_request
 
 jobs:
   # Eslint Checker
@@ -20,18 +20,6 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - uses: theashraf/alex-action@master
-  # Misspell Checker
-  misspell-checker:
-    name: Misspell Checking
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: sobolevn/misspell-fixer-action@master
-      - uses: peter-evans/create-pull-request@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: 'Fixes by misspell-fixer'
-          title: 'Typos fix by misspell-fixer'
   # Check for new dependencies
   check_new_dependencies:
     runs-on: ubuntu-latest

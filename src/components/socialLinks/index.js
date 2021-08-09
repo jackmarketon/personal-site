@@ -51,6 +51,7 @@ export default () => (
       rel="noopener noreferrer"
     >
       <Linkedin />
+      master & slave hard dirve
     </Link>
   </Wrapper>
 );
