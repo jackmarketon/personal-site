@@ -1,0 +1,36 @@
+language: node_js
+
+git:
+  # Minimize git history, but ensure to not break things:
+  # - Merging multiple PR's around same time may introduce a case where it's not
+  #   the last merge commit that is to be tested
+  # - Aside of merge commit we need a previous commit to be able to detect a version switch
+  depth: 30
+
+cache:
+  # Not relying on 'npm' shortcut, as per Travis docs it's the only 'node_modules' that it'll cache
+  directories:
+    - $HOME/.npm
+    - node_modules
+
+env:
+  global:
+    - FORCE_COLOR=1 # ensure colored output
+
+# Ensure to install dependencies at their latest versions
+install:
+  # Note: with `npm update` there seems no way to update all project dependency groups in one run
+  - npm update --no-save # Updates just dependencies
+  # Note: npm documents --dev option for dev dependencies update, but it's only --save-dev that works
+  - npm update --save-dev --no-save # Updates just devDependencies
+
+before_script:
+  # Fail build right after first script fails. Travis doesn't ensure that: https://github.com/travis-ci/travis-ci/issues/1066
+  # More info on below line: https://www.davidpashley.com/articles/writing-robust-shell-scripts/#idm5413512
+  - set -e
+  - git config --global user.email "platform@serverless.com"
+  - git config --global user.name "Serverless CI"
+
+script:
+  - 'npm run lint'
+  - 'npm run test'
