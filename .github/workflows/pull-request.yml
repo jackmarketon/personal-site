@@ -15,7 +15,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - uses: theashraf/alex-action@master
+      - uses: reviewdog/action-alex@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-review
+          level: error
   # Eslint Checker
   eslint:
     name: Eslint Check
@@ -27,5 +31,5 @@ jobs:
         with:
           reporter: github-pr-check
           eslint_flags: '-c .eslintrc src/'
-          level: warning
+          level: error
           github: github-pr-check
