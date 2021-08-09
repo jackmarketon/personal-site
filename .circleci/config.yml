@@ -12,16 +12,16 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
       - run:
-        name: Install dependencies
-        command: npm install
+          name: Install dependencies
+          command: npm install
   
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run:
-        name: Run eslint
-        command: npm run eslint
+          name: Run eslint
+          command: npm run eslint
       - run:
-        name: Run Jest
-        command: npm run jest
+          name: Run Jest
+          command: npm run jest
