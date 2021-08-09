@@ -1,5 +1,5 @@
 name: Pull Request Checking
-on: pull-request
+on: pull_request
 
 jobs:
   # Eslint Checker
