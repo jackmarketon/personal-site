@@ -32,4 +32,14 @@ jobs:
           reporter: github-pr-check
           eslint_flags: '-c .eslintrc src/'
           level: error
-          github: github-pr-check
+  # Language Checker
+  grammar-lint:
+    name: Language Tool
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: reviewdog/action-languagetool@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-review
+          level: info
