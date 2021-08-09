@@ -1,5 +1,7 @@
 name: Lighthouse
-on: [pull_request_review_comment, issue_comment]
+on:
+  issue_comment:
+    type: [created, edited]
 
 jobs:
   lighthouse:
