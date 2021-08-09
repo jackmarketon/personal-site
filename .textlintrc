@@ -1,0 +1,44 @@
+{
+  "rules": {
+    "alex": {
+      "profanitySureness": 1,
+      "noBinary": true,
+
+    },
+    "diacritics": true,
+    "common-misspellings": true,
+    "en-capitalization": {
+      "allowHeading": true,
+      "allowFigures": true,
+      "allowLists": true,\
+    },
+    "rousseau": {
+      "showLevels": [
+        "suggestion",
+        "warning",
+        "error"
+      ]
+    },
+    "stop-words": {
+      "defaultWords": true,
+      "words": [
+        [
+          "blacklist",
+          "blocklist"
+        ],
+        [
+          "asciidoc",
+          "AsciiDoc"
+        ]
+      ],
+    }
+  },
+  "plugins": {
+    "jsx": {
+      "extensions": [
+        ".js"
+      ]
+    },
+    "html": true
+  }
+}
