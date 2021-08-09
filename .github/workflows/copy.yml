@@ -2,9 +2,9 @@ name: Copy
 on: [push, pull_request]
 
 jobs:
-  copy:
+  language-lint:
     runs-on: ubuntu-latest
-    name: Copy checks (via Alex)
+    name: Language Linting (via Alex)
     steps:
       - uses: actions/checkout@master
       - uses: theashraf/alex-action@master
