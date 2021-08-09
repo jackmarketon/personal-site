@@ -1,11 +1,12 @@
 name: Copy
-on: [push]
+on: [push, pull_request]
 
 jobs:
   copy:
     runs-on: ubuntu-latest
     name: Copy checks (via Alex)
     steps:
+      - uses: actions/checkout@master
       - uses: theashraf/alex-action@master
   misspell:
     runs-on: ubuntu-latest
