@@ -1,9 +1,11 @@
 name: Lighthouse
-on: [pull_request]
+  issue_comment:
+    types: [created, edited]
 
 jobs:
   lighthouse:
     runs-on: ubuntu-latest
+    # if: ${{}}
     steps:
       - name: Get Vercel URL
         uses: aaimio/vercel-preview-url-action@master
