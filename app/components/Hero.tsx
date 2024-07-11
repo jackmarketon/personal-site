@@ -14,8 +14,8 @@ const Hero = () => {
           Howdy, I&apos;m Jackson Marketon!
         </h1>
       </div>
-      <div className="flex flex-row">
-        <div className="flex flex-col w-1/2 items-center flex-start justify-center gap-4">
+      <div className="flex flex-col md:flex-row">
+        <div className="flex flex-col w-full md:w-1/2 items-center flex-start justify-center gap-4">
           <div className="flex content-start">
             <h2 className="text-2xl md:text-4xl font-bold text-gray-700 dark:text-grey-200 m-2 mx-8">
               I am a:
@@ -58,7 +58,7 @@ const Hero = () => {
           </RoughNotationGroup>
           </div>
         </div>
-        <div className="flex flex-center self-center w-1/2">
+        <div className="flex flex-center self-center w-1/2 md:visible hidden">
           <div className="overflow-hidden rounded-full max-h-[75%] h-full max-w-[75%] w-full">
           <Image src={profilePic} alt="Capybara representation of Jackson" />
           </div>
