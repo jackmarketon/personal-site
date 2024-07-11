@@ -2,7 +2,6 @@
 import Icons from "unplugin-icons/webpack";
 
 const nextConfig = {
-  output: "export",
   images: {
     unoptimized: true,
   },
