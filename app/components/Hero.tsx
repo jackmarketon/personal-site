@@ -58,7 +58,7 @@ const Hero = () => {
           </RoughNotationGroup>
           </div>
         </div>
-        <div className="flex flex-center self-center w-1/2 md:visible hidden">
+        <div className="flex-center self-center w-1/2 md:flex hidden">
           <div className="overflow-hidden rounded-full max-h-[75%] h-full max-w-[75%] w-full">
           <Image src={profilePic} alt="Capybara representation of Jackson" />
           </div>
